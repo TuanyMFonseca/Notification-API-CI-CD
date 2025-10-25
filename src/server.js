@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import notificationRoutes from "./routes/notificationRoutes.js";
+import logRoutes from "./routes/logRoutes.js";
 
 
 dotenv.config();
@@ -10,6 +11,7 @@ app.use(express.json());
 
 // Rotas
 app.use("/api", notificationRoutes);
+app.use("/api", logRoutes);
 
 // Rota de teste
 app.get("/ping", (req, res) => {

@@ -1,4 +1,4 @@
-let notifications = []; // Simulação de banco de dados em memória
+let notifications = []; // Simulação de Banco de Dados 
 
 export const NotificationModel = {
   create: (data) => {
@@ -11,7 +11,13 @@ export const NotificationModel = {
     notifications.push(newNotification);
     return newNotification;
   },
+
+  findByUserId: (user_id) => {
+    return notifications.filter((n) => n.user_id == user_id);
+  },
+
   findAll: () => notifications,
 };
+
 
 // Futuramente, esse arquivo pode ser trocado por um modelo real do Mongoose, sem mudar o resto da API.
