@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import notificationRoutes from "./routes/notificationRoutes.js";
 import logRoutes from "./routes/logRoutes.js";
+import app from "./app.js";
 
 
 dotenv.config();
